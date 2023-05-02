@@ -41,15 +41,15 @@ const teamMembers = [
 // ******************************************************
 
 // Function to print on console the array of objects
-const printTeamMembersInConsole = (array) => {
-    array.forEach((element) => {
+function printTeamMembersInConsole(arrayofObjects) {
+    arrayofObjects.forEach((element) => {
         console.log(element.name, element.role, element.photo);
     });
 };
 
 // Function to print on DOM the array of objects
-const printTeamMembersDOM = (array) => {
-    array.forEach((element) => {
+function printTeamMembersDOM(arrayofObjects) {
+    arrayofObjects.forEach((element) => {
         const {name, role, photo} = element;
         const cardTeamMembers = `
             <div class="card">
@@ -71,5 +71,3 @@ printTeamMembersInConsole(teamMembers);
 
 // Print on DOM the array of objects
 printTeamMembersDOM(teamMembers);
-
-
