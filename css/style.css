@@ -1,10 +1,237 @@
 /********************/
 /* RESET */
 /********************/
+:root 
+{
+    --color-primary: #cdd5e7;
+    --color-secondary: #7a7772bd;
+    --color-terziary: #201e22;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
 
+/********************/
+/* HEADER */
+/********************/
+.header {
+    background-color: var(--color-terziary);
+    padding: 1rem 0;
+}
+
+.headerLogo {
+    text-align: center;
+}
+
+.headerLogo img {
+    width: 12.5rem;
+}
+
+.headerNav {
+    text-align: center;
+}
+
+.headerNavList {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.headerNavItem {
+    margin: 0 1rem;
+}
+
+.headerNavLink {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+}
+
+.headerNavLink:hover {
+    color: var(--color-secondary);
+}
+
+/********************/
+/* MAIN */
+/********************/
+.main {
+    padding: 1rem;
+    background-color: var(--color-secondary);
+}
+
+.teamMembers {
+    /* grid mobile first  */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    grid-gap: 1rem;
+}
+
+.card {
+    background-color: var(--color-terziary);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.card p {
+    color: var(--color-secondary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+/**************/
+/* FOOTER */
+/**************/
+.footer {
+    background-color: var(--color-terziary);
+    padding: 1rem 0;
+}
+
+.footerLogo {
+    text-align: center;
+}
+
+.footerLogo img {
+    width: 6.25rem;
+}
+
+.footerNav {
+    text-align: center;
+}
+
+.footerNavList {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.footerNavItem {
+    margin: 0 1rem;
+}
+
+.footerNavLink {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+}
+
+.footerNavLink:hover {
+    color: var(--color-secondary);
+}
+
+.footerSocialMedia {
+    text-align: center;
+    padding: 1rem 0;
+
+}
+
+.footerSocialMediaLink {
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+    padding: 1rem;
+}
+
+.footerSocialMediaLink:hover {
+    color: var(--color-secondary);
+}
+
+/******************/
+/* MEDIA QUERIES */
+/******************/
+
+/* MEDIA QUERIES FOR XS MOBILE */
+@media screen and (max-width: 400px) {
+    .teamMembers {
+        grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
+    }
+
+    /* size the dimension of link in the header and footer  */
+    .headerNavLink {
+        font-size: 1rem;
+    }
+
+    .footerNavLink {
+        font-size: 1rem;
+    }
+
+    .footerSocialMediaLink {
+        font-size: 1rem;
+    }
+}
+
+/* MEDIA QUERIES FOR TABLET OVER 768PX */
+@media screen and (min-width: 768px) {
+    .teamMembers {
+        grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    }
+}
+
+/* MEDIA QUERIES FOR DESKTOP OVER 1280PX */
+@media screen and (min-width: 1280px) {
+    .teamMembers {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+}
+
+/* MEDIA QUERIES FOR DESKTOP OVER 1680PX */
+@media screen and (min-width: 1680px) {
+    .teamMembers {
+        grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
+    }
+}
+
+/* MEDIA QUERIES FOR LARGE MONITOR OVER 1920PX */
+@media screen and (min-width: 120rem) {
+    .teamMembers {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+
+    .header {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .main {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .footer {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
