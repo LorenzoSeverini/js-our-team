@@ -210,12 +210,12 @@ body {
 /* MEDIA QUERIES FOR DESKTOP OVER 1680PX */
 @media screen and (min-width: 1680px) {
     .teamMembers {
-        grid-template-columns: repeat(auto-fit, minmax(31.25rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
 }
 
-/* MEDIA QUERIES FOR LARGE MONITOR OVER 1920PX */
-@media screen and (min-width: 120rem) {
+/* MEDIA QUERIES FOR LARGE MONITOR OVER 2000PX */
+@media screen and (min-width: 2000px) {
     .teamMembers {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     }
